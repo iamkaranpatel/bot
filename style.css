@@ -1,0 +1,447 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 62.5%;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    line-height: 3rem;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.bot__button{
+    cursor: pointer;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 100;
+}
+
+.bot__button svg{
+    width:6rem;
+    height:6rem;
+}
+
+.bot__container{
+    width: 32rem;
+    height: 48rem;
+    position: relative;
+    background-color: white;
+    border-radius: 1.8rem;
+    opacity: 0;
+    transition: all .5s ease-in;
+}
+
+.active{
+    opacity: 1;
+}
+
+.bot__card-container{
+    opacity: 0;
+}
+
+.bot__card-1{
+    height: 45%;
+    width: 100%;
+    padding: 2rem 4rem 0;
+    border-top-left-radius: 1.8rem;
+    border-top-right-radius: 1.8rem;
+    background-image: linear-gradient(90deg, rgba(245, 130, 31, 1),rgba(255, 92, 0, 1));
+    color: #ffffff;
+    opacity: 0;
+
+}
+
+.bot__card-1 h1{
+    font-size: 2.2rem;
+    font-weight: 700;
+}
+
+.bot__text-1{
+    display: flex;
+    width: 35%;
+    height: 3.5rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bot__text-1 h1{
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.hand{
+    display: flex;
+}
+
+.hand svg{
+    width: 2rem;
+    height: 2rem;
+}
+
+h2{
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 2rem;
+}
+
+h2 span{
+    display: block;
+}
+
+
+
+
+
+/* //          card -2 */
+
+
+.bot__card-2{
+    height: 63%;
+    width: 93%;
+    padding: 3rem 2rem 0;
+    background-color: #ffffff;
+    border-radius: .8rem;
+    margin: -5.5rem auto 0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+}
+
+.bot__text-2{
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bot__text-2 h1{
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.bot__text-2 svg{
+    width: 2rem;
+    height: 2rem;
+}
+
+.bot__list{
+    margin-top: -1rem;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.bot__item{
+    width: 25rem;
+    padding: .2rem .2rem;
+    list-style: none;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgb(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    
+}
+
+.bot__item svg{
+    width: 1.1rem;
+    height: 1.1rem;
+    margin-right: .5rem;
+    margin-left: .2rem;
+}
+
+.bot__link{
+    text-decoration: none;
+    font-size: .9rem;
+    font-weight: 400;
+    color: black;
+}
+
+.btn__container{
+    padding: 1.5rem 0;
+}
+
+.btn{
+    width: 20rem;
+    border-radius: 100px;
+    display: flex;
+    font-size: 1rem;
+    font-weight: 600;
+    align-items: center;
+    margin: 0 auto;
+    box-shadow: 0 0 5px rgb(0, 0, 0, 0.3);
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.btn svg{
+    height: 1rem;
+    width: 1rem;
+    margin-right: .8rem;
+}
+
+
+
+/* ///////   logo */
+
+
+.bot__logo{
+    background: linear-gradient(180deg, #FF7600 0%, #FF5C00 100%);
+    width: 4.7rem;
+    height: 4.7rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 14rem;
+    left: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bot__logo-2{
+     opacity: 0;
+    animation: load 1.2s ease-in forwards;
+    animation-delay: 3s;
+}
+
+.bot__logo svg{
+    width: 2.8rem;
+    height: 2.2rem;
+    margin: auto;
+}
+
+
+
+
+/* //animation// */
+
+
+@keyframes load {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+
+/* ///////////////               media query             /////////////////////// */
+
+
+@media only screen and (max-width : 500px) {
+
+    .bot__button svg{
+        width:3rem;
+        height:3rem;
+    }
+        
+    .bot__container{
+        width: 28rem;
+        height: 43rem;
+    }
+
+    .bot__card-1{
+        height: 40%;
+    }
+
+    .bot__card-1 h1{
+        font-size: 1.8rem;
+    }
+
+
+    .bot__text-1 {
+        height: 3rem;
+    }
+
+    .bot__text-1 h1{
+        font-size: 1.5rem;
+    }
+
+    .hand svg{
+        width: 1.5rem;
+        height: 1.5rem;
+    }
+
+    h2{
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    .bot__card-2{
+        height: 64%;
+        margin-top: -3.5rem;
+        padding: 2rem 1rem;
+    }
+
+    .bot__text-2{
+       width: 55%;
+    }
+
+    .bot__text-2 h1{
+        font-size: .8rem;
+    }
+
+    .bot__text-2 svg{
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+
+    .bot__list{
+        height: 80%;
+    }
+
+    .bot__item{
+        width: 23rem;
+    }
+
+    .bot__item svg{
+        width: .9rem;
+        height: .9rem;
+    }
+
+    .bot__link{
+        font-size: 0.8rem;
+    }
+
+    .btn__container {
+        padding: .5rem;
+    }
+
+    .btn{
+        width: 17rem;
+        height: 3rem;
+        font-size: .75rem;
+    }
+
+    .btn svg{
+        height: .8rem;
+        width: .8rem;
+    }
+
+    .bot__logo{
+        width: 3.9rem;
+        height: 3.9rem;
+        top: 11.5rem;
+        left: 3.5rem;
+    }
+
+    .bot__logo svg{
+        width: 2rem;
+        height: 2rem;
+    }
+}
+
+
+
+@media only screen and (max-width : 400px) {
+        
+    .bot__container{
+        width: 20rem;
+        height: 35rem;
+    }
+
+    .bot__card-1{
+        height: 43%;
+        padding: 1.5rem 2rem 0;
+    }
+
+    .bot__card-1 h1{
+        font-size: 1.4rem;
+    }
+
+
+    .bot__text-1 {
+        height: 2rem;
+        width: 30%;
+    }
+
+    .bot__text-1 h1{
+        font-size: 1.2rem;
+    }
+
+    .hand svg{
+        width: 1rem;
+        height: 1rem;
+    }
+
+    h2{
+        font-size: .8rem;
+        line-height: 1.5rem;
+    }
+
+    .bot__card-2{
+        height: 64%;
+        margin-top: -3.5rem;
+        padding: 1rem 1rem;
+    }
+
+    .bot__text-2{
+       width: 55%;
+    }
+
+    .bot__text-2 h1{
+        font-size: .55rem;
+    }
+
+    .bot__text-2 svg{
+        height: 1rem;
+        width: 1rem;
+    }
+
+    .bot__list{
+        height: 80%;
+    }
+
+    .bot__item{
+        width: 16rem;
+    }
+
+    .bot__item svg{
+        width: .9rem;
+        height: .9rem;
+    }
+
+    .bot__link{
+        font-size: 0.65rem;
+    }
+
+    .btn__container {
+        padding: .5rem;
+    }
+
+    .btn{
+        width: 11rem;
+        height: 1.8rem;
+        font-size: .55rem;
+    }
+
+    .btn svg{
+        height: .8rem;
+        width: .8rem;
+    }
+
+    .bot__logo{
+        width: 2.8rem;
+        height: 2.8rem;
+        top: 10rem;
+        left: 2.5rem;
+    }
+
+    .bot__logo svg{
+        width: 1rem;
+        height: 1rem;
+    }
+}
